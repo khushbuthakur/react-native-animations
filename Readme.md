@@ -1,7 +1,7 @@
 1. Move Ball 
 This is amde using animated api of react native. This is purely functionaly component.
 
-
+![alt text](notes/img/moveBall.gif)
 
 
 A. Animated system
