@@ -1,4 +1,10 @@
-1. Animated system
+1. Move Ball 
+This is amde using animated api of react native. This is purely functionaly component.
+
+
+
+
+A. Animated system
 
 Always ask these 3 questions before starting aniamtions
 
@@ -11,7 +17,7 @@ Always ask these 3 questions before starting aniamtions
     2. It will move downwards
     3. It is a ball
 
-2. Pan responder system
+B. Pan responder system
      1. What are we touching?
      2. What component handles touche?
      3. How is gesture changing?   
