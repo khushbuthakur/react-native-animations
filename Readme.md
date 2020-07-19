@@ -24,3 +24,4 @@ B. Pan responder system
      
     <img src="notes/img/animated-props.png" width="100" height="100" /> 
      
+     ![Alt Text](notes/img/animated-props.png)
