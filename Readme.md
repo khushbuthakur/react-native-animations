@@ -18,6 +18,7 @@ Always ask these 3 questions before starting aniamtions
     3. It is a ball
 
 B. Pan responder system
+
      1. What are we touching?
      2. What component handles touche?
      3. How is gesture changing?   
