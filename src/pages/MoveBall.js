@@ -13,29 +13,29 @@ import { WINDOW_WIDTH, WINDOW_HEIGHT } from '../utils/styles';
     1. It is at 200,500
     2. It will move downwards
     3. It is a ball
+    
 */ 
 
 const MoveBall = () => {
   // initial position of ball
- //                                            x , y
+                                            // x , y
   const position = useRef(new Animated.ValueXY(0, 0)).current;
 
   useEffect(() => {
     /*   all works good till time we do not comment out below line, i.e. 
          when main js thread is exectuing below line, animation lags */
 
-      const arr = new Array(5000).fill(0).map(item=>console.log(item));
+    //   const arr = new Array(5000).fill(0).map(item=>console.log(item));
   }, []);
 
   const slideBtn = (type) =>{
-    Animated
-        .spring(position, {
+    Animated.spring(position, {
         toValue: {
         x: type === 'UP' ? 0 : WINDOW_WIDTH - 200,
         y: type === 'UP' ? 0 : WINDOW_HEIGHT - 200
         },
         useNativeDriver: true, // set to true 
-        duration : 5000
+        duration : 2000
     }).start();
 
     /*
@@ -56,9 +56,10 @@ const MoveBall = () => {
           {/*position.getTranslateTransform() gives output in form : 
              [{"translateX": 0}, {"translateY": 0}] */}
 
-          <Animated.View style={[styles.ball, 
+          <Animated.View style={[ 
             {transform : position.getTranslateTransform()}
             ]}>
+              <View style={styles.ball}/>
          </Animated.View>
 
          {/* this below code lags */}

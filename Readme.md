@@ -1,7 +1,6 @@
-import React from 'react'
-import { View, Text } from 'react-native'
-/*
-    Always ask these 3 questions before starting aniamtions
+1. Animated system
+
+Always ask these 3 questions before starting aniamtions
 
     1. Where is element to animate right now. Exact X,Y positions.
     2. Where is this element moving?
@@ -11,14 +10,8 @@ import { View, Text } from 'react-native'
     1. It is at 200,500
     2. It will move downwards
     3. It is a ball
-*/ 
 
-const Basics = () => {
-    return (
-        <View>
-            <Text></Text>
-        </View>
-    )
-}
-
-export default Basics
+2. Pan responder system
+     1. What are we touching?
+     2. What component handles touche?
+     3. How is gesture changing?   

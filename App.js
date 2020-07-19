@@ -17,12 +17,14 @@ import {
 } from 'react-native';
 
 import MoveBall from './src/pages/MoveBall';
+import SwipeCards from './src/pages/SwipeCards';
 
 const App = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
+        {/* <SwipeCards/> */}
         <MoveBall/>
       </SafeAreaView>
     </>
