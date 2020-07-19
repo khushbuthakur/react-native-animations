@@ -21,3 +21,6 @@ B. Pan responder system
      1. What are we touching?
      2. What component handles touche?
      3. How is gesture changing?   
+     
+    <img src="notes/img/animated-props.png" width="100" height="100" /> 
+     
