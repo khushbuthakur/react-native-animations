@@ -24,8 +24,8 @@ const App = () => {
     <>
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
-        {/* <SwipeCards/> */}
-        <MoveBall/>
+        <SwipeCards/>
+        {/* <MoveBall/> */}
       </SafeAreaView>
     </>
   );
