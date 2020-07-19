@@ -34,8 +34,7 @@ const MoveBall = () => {
         x: type === 'UP' ? 0 : WINDOW_WIDTH - 200,
         y: type === 'UP' ? 0 : WINDOW_HEIGHT - 200
         },
-        useNativeDriver: true, // set to true 
-        duration : 2000
+        useNativeDriver: true // set to true in order to avoid lagging i.e. call animation on ui thread
     }).start();
 
     /*

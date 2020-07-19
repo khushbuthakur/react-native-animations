@@ -14,6 +14,9 @@ Gesture system questions
 
 */
 
+const SWIPE_THRESHOLD = WINDOW_WIDTH * 0.25,
+      SWIPE_OUT_DURATION = 250;  
+
 const SwipeCards = () => {
     const [users, setUsers] = useState([]);
 
@@ -58,8 +61,17 @@ const SwipeCards = () => {
             },
 
             /* when let goes the element  */
-            onPanResponderRelease : () =>{
-                resetPostion();
+            onPanResponderRelease : (event,gestureState) =>{
+
+                if(gestureState.dx > SWIPE_THRESHOLD){
+                    console.log('user liked, swipe right');
+                    forceSwipeCard('RIGHT');
+                }else if(gestureState.dx < -SWIPE_THRESHOLD){
+                    console.log('user disliked, swipe left');
+                    forceSwipeCard('LEFT');
+                }else{
+                    resetPostion();
+                }
             }
         })
     ).current
@@ -101,10 +113,22 @@ const SwipeCards = () => {
     }
 
     const resetPostion = () =>{
+        // Animated.spring gives bouncy animation
         Animated.spring(position,{
-            toValue : {x:0,y:0},
+            toValue : {x : 0, y : 0 },
             useNativeDriver : true
-        })
+        }).start()
+    }
+
+    const forceSwipeCard = (type) =>{
+        // this moves card away from the screen.
+        // Animated.timing gives linear animation
+        const pos = type === 'RIGHT' ? WINDOW_WIDTH : - WINDOW_WIDTH;
+        Animated.timing(position,{
+            toValue : {x : pos, y : 0},
+            duration : SWIPE_OUT_DURATION,
+            useNativeDriver : true
+        }).start()
     }
 
     return (
